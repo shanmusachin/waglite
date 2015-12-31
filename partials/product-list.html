@@ -1,0 +1,32 @@
+<div class="container-fluid" style="background-color:#fff;width:111%;margin-left:-5%;">
+        <div class="wg-header">
+          <img class="appIcon" src="images/wg_img/wg_logo.png">
+        </div>
+        <!--Body content-->
+        <div class="phones" style="margin-top: 82px;" ng-if="phone.name">
+          <a href="#/phones/{{phone.id}}" class="thumb">
+            <img style="width: 120px;" ng-src="{{phone.imageUrl}}">
+          </a>
+          <a style="font-size:25px;margin-left: 50px;" href="#/phones/{{phone.id}}">{{phone.name}}</a>
+          <div>
+            <p style="margin-left: 115px;font-size: 10px;">{{phone.description}}</p>
+          </div>
+          <p style="margin-left: 115px;font-size:11px;color:red;"><strike>{{phone.price}}</strike></p>
+          <p style="margin-left: 115px;font-size:15px;color: #428BCD">{{phone.sellprice}}</p>
+          <hr style="width: 100%;margin-top: 35px;"/>
+        </div>
+        
+      <ul class="phones" style="margin-top: 82px;" ng-if="phones">
+        <li ng-repeat-start="phone in phones" class="thumbnails" >
+          <a href="#/phones/{{phone.id}}"  class="thumb">
+              <img style="width: 120px;float: right;" ng-src="{{phone.imageUrl}}">
+            </a>
+          <a style="font-size:25px" href="#/phones/{{phone.id}}">{{phone.name}}</a>
+          <div><p style="font-size: 10px;">{{phone.description}}</p></div>
+          <p style="margin-left: 60px;font-size:11px;color:red;"><strike>{{phone.price}}</strike></p>
+          <p style="margin-left: 60px;font-size:15px;color: #428BCD">{{phone.sellprice}}</p>
+        </li>
+        <hr style="width: 100%;margin-top: 35px;" ng-repeat-end/>
+      </ul>
+
+</div>
